@@ -1,0 +1,20 @@
+﻿@model Comic
+
+<h1>Delete Comic</h1>
+
+<p>
+    <a asp-controller="Comic" asp-action="Index">Back</a>
+</p>
+
+<form method="post">
+    <label>Id Comic</label>
+    <input type="number" name="idComic" class="form-control" value="@Model.IdComic" disabled/>
+    <label>Nombre</label>
+    <input type="text" name="nombre" class="form-control" value="@Model.Nombre"  disabled />
+    <label>Imagen</label>
+    <input type="text" name="imagen" class="form-control" value="@Model.Imagen" disabled />
+    <label>Descripcion</label>
+    <input type="text" name="descripcion" class="form-control" value="@Model.Descripcion" disabled />
+    <a asp-controller="Comic" asp-action="DeletePost" asp-route-idComic="@Model.IdComic" class="btn btn-danger">Eliminar</a>
+    
+</form>
